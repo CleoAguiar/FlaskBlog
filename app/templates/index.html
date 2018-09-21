@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% if title %}
+	<title>{{ title }} - FlaskBlog</title>
+	{% else %}
+	<title>Bem Vindo ao FlaskBlog</title>
+	{% endif %}
+</head>
+<body>
+	<h1>Ola, {{ user.username }}! </h1>
+</body>
+</html>
