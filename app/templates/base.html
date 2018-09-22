@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% if title %}
+	<title>{{ title }} - FlaskBlog</title>
+	{% else %}
+	<title>Bem Vindo ao FlaskBlog</title>
+	{% endif %}
+</head>
+<body>
+	<div>Flaskblog: <a href="/index">Inicial</a></div>
+	<hr>
+	{% block content %}
+	<!-- pages -->
+	{% endblock %}
+</body>
+</html>
