@@ -13,7 +13,7 @@
 				<p>Último acesso: {{ user.last_seen }}</p>
 			{% endif %}
 			{% if user == current_user %}
-				<p><a href="{{ url_for('edit_profile') }}">Editar seu perfil</a></p>
+				<p><a href="{{ url_for('edit_profile') }}">Editar perfil</a></p>
 			{% endif %}
 		</td>
 	</tr>
