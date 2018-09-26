@@ -24,15 +24,25 @@ class RegistrationForm(FlaskForm):
     def validate_username(self, username):
         user = User.query.filter_by(username=username.data).first()
         if user is not None:
-            raise ValidationError('Usuário já cadastrado.')
+            raise ValidationError('Usuário já existe.')
 
     def validate_email(self, email):
         user = User.query.filter_by(email=email.data).first()
         if user is not None:
-            raise ValidationError('Email já cadastrado.')
+            raise ValidationError('Email já existe.')
 
 
 class EditProfileForm(FlaskForm):
     username = StringField('Usuário', validators=[DataRequired()])
     about_me = TextAreaField('Sobre mim', validators=[Length(min=0, max=140)])
     submit = SubmitField('Salvar')
+
+    def __init__(self, original_username, *args, **kwargs):
+        super(EditProfileForm, self).__init__(*args, **kwargs)
+        self.original_username = original_username
+
+    def validate_username(self, username):
+        if username.data != self.original_username:
+            user = User.query.filter_by(username=self.username.data).first()
+            if user is not None:
+                raise ValidationError('Usuário já existe.')

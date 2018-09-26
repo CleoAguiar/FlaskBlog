@@ -71,3 +71,4 @@ Traceback (most recent call last):
   File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 509, in do_execute
     cursor.execute(statement, parameters)
 sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.username [SQL: 'UPDATE user SET username=?, about_me=? WHERE user.id = ?'] [parameters: ('suzan', 'Atualizando o perfil!', 2)] (Background on this error at: http://sqlalche.me/e/gkpj)
+2018-09-26 13:57:39,768 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:49]
