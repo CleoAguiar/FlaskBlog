@@ -1,4 +1,24 @@
-2018-09-28 11:03:36,728 ERROR: Exception on /index [GET] [in c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py:1761]
+2018-10-01 09:54:22,949 ERROR: Exception on /explore [GET] [in c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\routes.py", line 152, in explore
+    prev_url=prev_url, next_num=next_num)
+NameError: name 'next_num' is not defined
+2018-10-01 09:54:46,402 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:49]
+2018-10-01 09:54:56,658 ERROR: Exception on /index [GET] [in c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -15,117 +35,6 @@ Traceback (most recent call last):
   File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
   File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\routes.py", line 24, in index
-    posts=posts)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
-    context, ctx.app)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\templating.py", line 117, in _render
-    rv = template.render(context)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\templates\index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\templates\base.html", line 30, in top-level template code
-    {% block content %}
-  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\templates\index.html", line 6, in block "content"
-    {{ form.hidden_tag() }}
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\environment.py", line 430, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
-2018-09-28 11:03:46,415 ERROR: Exception on /index [GET] [in c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\routes.py", line 24, in index
-    posts=posts)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
-    context, ctx.app)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\templating.py", line 117, in _render
-    rv = template.render(context)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\templates\index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\templates\base.html", line 30, in top-level template code
-    {% block content %}
-  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\templates\index.html", line 6, in block "content"
-    {{ form.hidden_tag() }}
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\environment.py", line 430, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
-2018-09-28 11:07:53,530 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:49]
-2018-09-28 11:43:10,017 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:49]
-2018-09-28 11:43:16,035 ERROR: Exception on /explore [GET] [in c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 684, in __getattr__
-    return getattr(self.comparator, key)
-AttributeError: 'Comparator' object has no attribute 'all'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\routes.py", line 136, in explore
-    posts = Post.query.order_by(Post.timestamp.desc().all())
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 690, in __getattr__
-    key)
-AttributeError: Neither 'UnaryExpression' object nor 'Comparator' object has an attribute 'all'
-2018-09-28 11:43:57,171 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:49]
-2018-10-01 08:52:40,962 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:49]
-2018-10-01 09:18:28,879 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:49]
-2018-10-01 09:18:33,579 ERROR: Exception on /explore [GET] [in c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\routes.py", line 140, in explore
-    page, app.config['POSTS_PER_PAGE'], False)
-KeyError: 'POSTS_PER_PAGE'
-2018-10-01 09:18:56,334 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:49]
+    page, app.config['POSTS_PER_PAGE', False])
+KeyError: ('POSTS_PER_PAGE', False)
+2018-10-01 09:55:30,114 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:49]
