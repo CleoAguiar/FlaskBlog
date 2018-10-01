@@ -107,3 +107,25 @@ Traceback (most recent call last):
     key)
 AttributeError: Neither 'UnaryExpression' object nor 'Comparator' object has an attribute 'all'
 2018-09-28 11:43:57,171 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:49]
+2018-10-01 08:52:40,962 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:49]
+2018-10-01 09:18:28,879 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:49]
+2018-10-01 09:18:33,579 ERROR: Exception on /explore [GET] [in c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\routes.py", line 140, in explore
+    page, app.config['POSTS_PER_PAGE'], False)
+KeyError: 'POSTS_PER_PAGE'
+2018-10-01 09:18:56,334 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:49]
