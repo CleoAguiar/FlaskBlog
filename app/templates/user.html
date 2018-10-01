@@ -32,4 +32,11 @@
 	{% include "_post.html" %}
 {% endfor %}
 
+{% if prev_url %}
+<a href="{{ prev_url }}">Recentes</a>
+{% endif %}
+{% if next_url %}
+<a href="{{ next_url }}">Antigos</a>
+{% endif %}
+
 {% endblock %}

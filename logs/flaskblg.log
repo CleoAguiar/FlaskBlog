@@ -38,3 +38,24 @@ Traceback (most recent call last):
     page, app.config['POSTS_PER_PAGE', False])
 KeyError: ('POSTS_PER_PAGE', False)
 2018-10-01 09:55:30,114 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:49]
+2018-10-01 10:21:28,281 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:49]
+2018-10-01 10:24:41,590 ERROR: Exception on /user/david [GET] [in c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\routes.py", line 83, in user
+    if posts.has_prev else None
+NameError: name 'post' is not defined
+2018-10-01 10:25:07,068 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:49]
