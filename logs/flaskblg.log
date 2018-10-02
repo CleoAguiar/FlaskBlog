@@ -59,3 +59,4 @@ Traceback (most recent call last):
     if posts.has_prev else None
 NameError: name 'post' is not defined
 2018-10-01 10:25:07,068 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:49]
+2018-10-02 11:49:26,100 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:52]
