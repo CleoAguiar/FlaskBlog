@@ -52,3 +52,10 @@ class PostForm(FlaskForm):
     post = TextAreaField('Diga algo',
                          validators=[DataRequired(), Length(min=1, max=140)])
     submit = SubmitField('Publicar')
+
+
+class ResetPasswordRequestForm(FlaskForm):
+    email = StringField('Email', validators=[DataRequired(), Email()])
+    submit = SubmitField("Redefinir Senha")
+    
+        
