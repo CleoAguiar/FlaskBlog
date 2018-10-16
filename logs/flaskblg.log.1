@@ -1,4 +1,4 @@
-2018-09-28 11:03:36,728 ERROR: Exception on /index [GET] [in c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py:1761]
+2018-10-16 18:52:48,982 ERROR: Exception on /login [GET] [in c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,10 +12,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\routes.py", line 24, in index
-    posts=posts)
+  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\routes.py", line 51, in login
+    return render_template('login.html', title='Entrar', form=form)
   File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
     context, ctx.app)
   File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\templating.py", line 117, in _render
@@ -28,64 +26,29 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\templates\index.html", line 1, in top-level template code
+  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\templates\base.html", line 21, in template
+    <a class="navbar-brand" href="{{ url_for('index') }}">Flaskblog</a>
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\templates\login.html", line 1, in top-level template code
     {% extends "base.html" %}
-  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\templates\base.html", line 30, in top-level template code
-    {% block content %}
-  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\templates\index.html", line 6, in block "content"
-    {{ form.hidden_tag() }}
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\environment.py", line 430, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
-2018-09-28 11:03:46,415 ERROR: Exception on /index [GET] [in c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\routes.py", line 24, in index
-    posts=posts)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
-    context, ctx.app)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\templating.py", line 117, in _render
-    rv = template.render(context)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
   File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
     reraise(exc_type, exc_value, tb)
   File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\templates\index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\templates\base.html", line 30, in top-level template code
-    {% block content %}
-  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\templates\index.html", line 6, in block "content"
-    {{ form.hidden_tag() }}
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\environment.py", line 430, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
-2018-09-28 11:07:53,530 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:49]
-2018-09-28 11:43:10,017 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:49]
-2018-09-28 11:43:16,035 ERROR: Exception on /explore [GET] [in c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 684, in __getattr__
-    return getattr(self.comparator, key)
-AttributeError: 'Comparator' object has no attribute 'all'
-
-During handling of the above exception, another exception occurred:
-
+  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\templates\base.html", line 21, in template
+    <a class="navbar-brand" href="{{ url_for('index') }}">Flaskblog</a>
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\parser.py", line 888, in subparse
+    self.stream.expect('block_end')
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\lexer.py", line 384, in expect
+    self.name, self.filename)
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got 'index'
+2018-10-16 18:55:45,970 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:51]
+2018-10-16 18:55:50,341 ERROR: Exception on /login [GET] [in c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -99,34 +62,41 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\routes.py", line 136, in explore
-    posts = Post.query.order_by(Post.timestamp.desc().all())
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 690, in __getattr__
-    key)
-AttributeError: Neither 'UnaryExpression' object nor 'Comparator' object has an attribute 'all'
-2018-09-28 11:43:57,171 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:49]
-2018-10-01 08:52:40,962 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:49]
-2018-10-01 09:18:28,879 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:49]
-2018-10-01 09:18:33,579 ERROR: Exception on /explore [GET] [in c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\routes.py", line 51, in login
+    return render_template('login.html', title='Entrar', form=form)
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
     reraise(exc_type, exc_value, tb)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\routes.py", line 140, in explore
-    page, app.config['POSTS_PER_PAGE'], False)
-KeyError: 'POSTS_PER_PAGE'
-2018-10-01 09:18:56,334 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:49]
-2018-10-01 09:54:18,354 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:49]
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\templates\login.html", line 959, in template
+    <td id="LC1" class="blob-code blob-code-inner js-file-line">{% extends &#39;base.html&#39; %}</td>
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\parser.py", line 273, in parse_extends
+    node = nodes.Extends(lineno=next(self.stream).lineno)
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\lexer.py", line 359, in __next__
+    self.current = next(self._iter)
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\lexer.py", line 562, in wrap
+    for lineno, token, value in stream:
+  File "c:\users\cleo\documents\github\flaskblog\venv\lib\site-packages\jinja2\lexer.py", line 739, in tokeniter
+    name, filename)
+jinja2.exceptions.TemplateSyntaxError: unexpected char '&' at 61162
+2018-10-16 19:01:38,182 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:48]
