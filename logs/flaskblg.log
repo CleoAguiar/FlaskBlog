@@ -101,3 +101,7 @@ Traceback (most recent call last):
     name, filename)
 jinja2.exceptions.TemplateSyntaxError: unexpected char '&' at 61162
 2018-10-16 19:05:50,778 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:48]
+2018-10-16 19:30:33,624 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:48]
+2018-10-16 19:31:06,551 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:48]
+2018-10-16 19:31:30,442 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:48]
+2018-10-22 16:47:12,215 INFO: Flaskblog startup [in C:\Users\Cleo\Documents\GitHub\FlaskBlog\app\__init__.py:48]
